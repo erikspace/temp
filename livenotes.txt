@@ -1,0 +1,25 @@
+p drive
+cd releases
+beta app
+daily
+vs2017 installers
+bandit (but others) MSI
+c
+program files x86
+ksa
+ksa bandit
+PROGRAM
+find then add to bin path
+
+this pc - properties
+or - advanced system settings
+environment variables
+add to path
+(log out, in?)
+
+debug -> set as startup project (bandit or other similar)
+
+output should show loading DLLs from added path
+
+bldsys can build branch
+
