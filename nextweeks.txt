@@ -20,3 +20,5 @@ KSA next weeks
 * pitch bug/branch tracking to wider group
   - facilitate review
   - better historical view
+
+* dropping 32bit DLLs
