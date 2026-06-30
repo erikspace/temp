@@ -14,5 +14,7 @@ KSA next weeks
 * continue with debug log pane
 * startup/shutdown times
 * consider automation via github
-* x64 and vs26 builds
+* build work
+  - x64 aka 64bit
+  - vs26 upgrades
 * pitch bug/branch tracking to wider group
