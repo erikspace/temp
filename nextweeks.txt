@@ -18,3 +18,5 @@ KSA next weeks
   - x64 aka 64bit
   - vs26 upgrades
 * pitch bug/branch tracking to wider group
+  - facilitate review
+  - better historical view
