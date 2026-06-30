@@ -23,3 +23,4 @@ KSA next weeks
 
 * dropping 32bit DLLs
 * empty CPPs to prevent linking
+* remove Data Translation DLL deps
