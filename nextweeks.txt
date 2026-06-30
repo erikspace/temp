@@ -22,3 +22,4 @@ KSA next weeks
   - better historical view
 
 * dropping 32bit DLLs
+* empty CPPs to prevent linking
