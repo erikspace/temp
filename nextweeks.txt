@@ -1,0 +1,18 @@
+KSA next weeks
+
+* cmake conversion (start with eye spy, varies in scope)
+* swap nuget for vcpkg where ever possible
+* utilize public/opensource where it makes sense
+  - swap custom matrix and other number processing for eigen3
+  - use fmt for string processing (can be "lazy" conversion)
+  - consider spdlog (or simple SQLite schema)
+  - swap custom xml processing for pugixml or tinyxml2
+  - consider boost for socket/tcp/com/serial code
+  - add OpenCV
+* untangle sln file for build speed (vastly easier with cmake)
+* follow up on spice menus
+* continue with debug log pane
+* startup/shutdown times
+* consider automation via github
+* x64 and vs26 builds
+* pitch bug/branch tracking to wider group
