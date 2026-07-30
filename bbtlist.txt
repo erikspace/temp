@@ -18,13 +18,13 @@ fail eyespy/source/Ksa.sln (system object not found)
 fail integrated/integrated.sln (does not even open)
 fail integrated/integrated2008.sln (unknown project configuration message)
 PASS integrated/integrated2017.sln
-./kSAAppComClient/kSAAppComClient/source/kSAAppComClientWindowsFormsApplication.sln
-./kSAControl/kSAUSBControl.sln
-./kSARMAT/Encoder.sln
-./kSATxtCmdProcessor/kSATxtCmdProcessor.sln
-./kdtReader/kdtReader.sln
-./ksa 400/ImageLibInstall/source/ImageLibInstall.sln
-./ksa MOS/source/Ksa.sln
+fail kSAAppComClient/kSAAppComClient/source/kSAAppComClientWindowsFormsApplication.sln  (missing dotNET)
+PASS kSAControl/kSAUSBControl.sln (after vcxproj auto upgrades)
+PASS kSARMAT/Encoder.sln (after vcxproj auto upgrades)
+fail kSATxtCmdProcessor/kSATxtCmdProcessor.sln (unknown project configuration message)
+fail kdtReader/kdtReader.sln (pch failures)
+fail ksa 400/ImageLibInstall/source/ImageLibInstall.sln (namespace issues)
+fail ksa MOS/source/Ksa.sln (system object not found)
 ./reflect/Rate Rat.sln
 ./reflect/source/Ksa.sln
 
