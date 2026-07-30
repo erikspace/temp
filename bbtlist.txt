@@ -3,8 +3,8 @@ Basic build test (excludes entirety of TestApps dir) -
 ./AppRegKeyMaker/RegKeyVerify/RegKeyVerify2008.sln
 ./AppRegKeyMaker/Source/RegKeyMaker.sln
 ./AppRegMaker.NET/source/AppRegMaker.sln
-./BanditFS/ConfigSummaryTool/FSConfigSummaryTool.sln
-./BanditFS/ConfigSummaryTool/FSConfigSummaryTool2017.sln
+ fail BanditFS/ConfigSummaryTool/FSConfigSummaryTool.sln (nuget)
+ fail BanditFS/ConfigSummaryTool/FSConfigSummaryTool2017.sln (missing dotNET)
 ./BanditFS/DataSummaryTool/FSDataSummaryTool.sln
 ./BanditFS/DataSummaryTool/FSDataSummaryTool2017.sln
 ./KsaPermissionServer/Source/KsaPermissionServer.sln
