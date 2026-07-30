@@ -8,15 +8,15 @@ fail BanditFS/ConfigSummaryTool/FSConfigSummaryTool2017.sln (missing dotNET)
 fail BanditFS/DataSummaryTool/FSDataSummaryTool.sln (nuget)
 fail BanditFS/DataSummaryTool/FSDataSummaryTool2017.sln (missing dotNET)
 fail KsaPermissionServer/Source/KsaPermissionServer.sln (system object not found)
-./RTech mos/SB_RIPCClientTest/SB_RIPCClientTest.sln
-./RTech mos/SB_RIPCSvrTest/SB_RIPCSvrTest.sln
-./RTech mos/source/Ksa.sln
+fail RTech mos/SB_RIPCClientTest/SB_RIPCClientTest.sln (old WINVER)
+fail RTech mos/SB_RIPCSvrTest/SB_RIPCSvrTest.sln (old WINVER)
+fail RTech mos/source/Ksa.sln (system object not found)
 PASS ShutterControl/ShutterControl.sln
-./bandit/source/Ksa.sln
-./common/source/Reflectivity/Reflectivity.sln
-./eyespy/source/Ksa.sln
-./integrated/integrated.sln
-./integrated/integrated2008.sln
+fail bandit/source/Ksa.sln (system object not found)
+fail common/source/Reflectivity/Reflectivity.sln (system object not found)
+fail eyespy/source/Ksa.sln (system object not found)
+fail integrated/integrated.sln (does not even open)
+fail integrated/integrated2008.sln (unknown project configuration message)
 PASS integrated/integrated2017.sln
 ./kSAAppComClient/kSAAppComClient/source/kSAAppComClientWindowsFormsApplication.sln
 ./kSAControl/kSAUSBControl.sln
