@@ -1,8 +1,8 @@
 Basic build test -
 
-./AppRegKeyMaker/RegKeyVerify/RegKeyVerify2008.sln
-./AppRegKeyMaker/Source/RegKeyMaker.sln
-./AppRegMaker.NET/source/AppRegMaker.sln
+fail AppRegKeyMaker/RegKeyVerify/RegKeyVerify2008.sln (old WINVER)
+PASS AppRegKeyMaker/Source/RegKeyMaker.sln (after vcxproj auto upgrades)
+fail AppRegMaker.NET/source/AppRegMaker.sln (missing dotNET)
  fail BanditFS/ConfigSummaryTool/FSConfigSummaryTool.sln (nuget)
  fail BanditFS/ConfigSummaryTool/FSConfigSummaryTool2017.sln (missing dotNET)
 ./BanditFS/DataSummaryTool/FSDataSummaryTool.sln
