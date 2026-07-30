@@ -1,4 +1,4 @@
-Basic build test (excludes entirety of TestApps dir) -
+Basic build test -
 
 ./AppRegKeyMaker/RegKeyVerify/RegKeyVerify2008.sln
 ./AppRegKeyMaker/Source/RegKeyMaker.sln
@@ -27,3 +27,22 @@ PASS integrated/integrated2017.sln
 ./ksa MOS/source/Ksa.sln
 ./reflect/Rate Rat.sln
 ./reflect/source/Ksa.sln
+
+TestApps subdir -
+./TestApps/AppCmdTesters/Amat/Client/AmatClientTest.sln
+./TestApps/AppCmdTesters/Amat/Integrated/Integrated.sln
+./TestApps/AppCmdTesters/Amat/Server/AmatServerTest.sln
+./TestApps/AppCmdTesters/kSAComm/C# kSAAppCmdClient/KsaCommCmdLine/KsaCommCmdLine.sln
+./TestApps/AppCmdTesters/kSAComm/C# kSAAppCmdClient/KsaCommDLLCmdLine/KsaCommDLLCmdLine.sln
+./TestApps/AppCmdTesters/kSAComm/C# kSAAppCmdClient/kSAAppComClientWindowsFormsApplication.sln
+./TestApps/AppCmdTesters/kSAComm/Client/kSACommClientTest.sln
+./TestApps/AppCmdTesters/kSAComm/Integrated/kSACommTest_Integrated.sln
+./TestApps/AppCmdTesters/kSAComm/Server/kSACommServerTest.sln
+./TestApps/AppCmdTesters/kSAComm/kSACommClient/kSACommClient.sln
+./TestApps/AxiomServerTester/AxiomServerTester.sln
+./TestApps/DataFilterTester/DataFilterTester.sln
+./TestApps/HomePulseTest/HomePulseTest.sln
+./TestApps/SDC Edge Pinch Simulator/SDC Edge Pinch Simulator.sln
+./TestApps/SiemenPLC/ReadBlock/ReadBlock.sln
+./TestApps/UnitTester/UnitTester.sln
+./TestApps/viewex/viewex.sln
