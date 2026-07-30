@@ -1,3 +1,29 @@
-Basic build test -
+Basic build test (excludes entirety of TestApps dir) -
 
-integrated2017.sln PASS
+./AppRegKeyMaker/RegKeyVerify/RegKeyVerify2008.sln
+./AppRegKeyMaker/Source/RegKeyMaker.sln
+./AppRegMaker.NET/source/AppRegMaker.sln
+./BanditFS/ConfigSummaryTool/FSConfigSummaryTool.sln
+./BanditFS/ConfigSummaryTool/FSConfigSummaryTool2017.sln
+./BanditFS/DataSummaryTool/FSDataSummaryTool.sln
+./BanditFS/DataSummaryTool/FSDataSummaryTool2017.sln
+./KsaPermissionServer/Source/KsaPermissionServer.sln
+./RTech mos/SB_RIPCClientTest/SB_RIPCClientTest.sln
+./RTech mos/SB_RIPCSvrTest/SB_RIPCSvrTest.sln
+./RTech mos/source/Ksa.sln
+./ShutterControl/ShutterControl.sln
+./bandit/source/Ksa.sln
+./common/source/Reflectivity/Reflectivity.sln
+./eyespy/source/Ksa.sln
+./integrated/integrated.sln
+./integrated/integrated2008.sln
+PASS integrated/integrated2017.sln
+./kSAAppComClient/kSAAppComClient/source/kSAAppComClientWindowsFormsApplication.sln
+./kSAControl/kSAUSBControl.sln
+./kSARMAT/Encoder.sln
+./kSATxtCmdProcessor/kSATxtCmdProcessor.sln
+./kdtReader/kdtReader.sln
+./ksa 400/ImageLibInstall/source/ImageLibInstall.sln
+./ksa MOS/source/Ksa.sln
+./reflect/Rate Rat.sln
+./reflect/source/Ksa.sln
