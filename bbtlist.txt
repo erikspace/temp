@@ -7,11 +7,11 @@ fail BanditFS/ConfigSummaryTool/FSConfigSummaryTool.sln (nuget)
 fail BanditFS/ConfigSummaryTool/FSConfigSummaryTool2017.sln (missing dotNET)
 fail BanditFS/DataSummaryTool/FSDataSummaryTool.sln (nuget)
 fail BanditFS/DataSummaryTool/FSDataSummaryTool2017.sln (missing dotNET)
-./KsaPermissionServer/Source/KsaPermissionServer.sln
+fail KsaPermissionServer/Source/KsaPermissionServer.sln (system object not found)
 ./RTech mos/SB_RIPCClientTest/SB_RIPCClientTest.sln
 ./RTech mos/SB_RIPCSvrTest/SB_RIPCSvrTest.sln
 ./RTech mos/source/Ksa.sln
-./ShutterControl/ShutterControl.sln
+PASS ShutterControl/ShutterControl.sln
 ./bandit/source/Ksa.sln
 ./common/source/Reflectivity/Reflectivity.sln
 ./eyespy/source/Ksa.sln
