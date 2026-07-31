@@ -25,8 +25,8 @@ fail kSATxtCmdProcessor/kSATxtCmdProcessor.sln (unknown project configuration me
 fail kdtReader/kdtReader.sln (pch failures)
 fail ksa 400/ImageLibInstall/source/ImageLibInstall.sln (namespace issues)
 fail ksa MOS/source/Ksa.sln (system object not found)
-./reflect/Rate Rat.sln
-./reflect/source/Ksa.sln
+fail reflect/Rate Rat.sln (system object not found)
+fail reflect/source/Ksa.sln (system object not found)
 
 TestApps subdir -
 ./TestApps/AppCmdTesters/Amat/Client/AmatClientTest.sln
