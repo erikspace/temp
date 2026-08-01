@@ -29,9 +29,9 @@ fail reflect/Rate Rat.sln (system object not found)
 fail reflect/source/Ksa.sln (system object not found)
 
 TestApps subdir -
-./TestApps/AppCmdTesters/Amat/Client/AmatClientTest.sln
-./TestApps/AppCmdTesters/Amat/Integrated/Integrated.sln
-./TestApps/AppCmdTesters/Amat/Server/AmatServerTest.sln
+fail TestApps/AppCmdTesters/Amat/Client/AmatClientTest.sln
+fail TestApps/AppCmdTesters/Amat/Integrated/Integrated.sln
+fail TestApps/AppCmdTesters/Amat/Server/AmatServerTest.sln
 ./TestApps/AppCmdTesters/kSAComm/C# kSAAppCmdClient/KsaCommCmdLine/KsaCommCmdLine.sln
 ./TestApps/AppCmdTesters/kSAComm/C# kSAAppCmdClient/KsaCommDLLCmdLine/KsaCommDLLCmdLine.sln
 ./TestApps/AppCmdTesters/kSAComm/C# kSAAppCmdClient/kSAAppComClientWindowsFormsApplication.sln
