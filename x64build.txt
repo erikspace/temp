@@ -1,0 +1,280 @@
+current x64 failures
+
+warning treated as error - no 'object' file generated
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+1 unresolved externals
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+1 unresolved externals
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+1 unresolved externals
+unresolved external symbol __imp_FT_OpenEx referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_ListDevices referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_Close referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT_SetTimeouts referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_SetLatencyTimer referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_CreateDeviceInfoList referenced in function Ft_Gpu_Hal_Init
+unresolved external symbol __imp_FT_GetDeviceInfoDetail referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_UnInitialize referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT4222_SetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetWakeUpInterrupt referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetSuspendOut referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetVersion referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_SetLines referenced in function Ft_Gpu_Hal_SetSPI
+unresolved external symbol __imp_FT4222_SPIMaster_SingleRead referenced in function Ft_Gpu_Hal_FT4222_Rd
+unresolved external symbol __imp_FT4222_SPIMaster_SingleWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPIMaster_MultiReadWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPI_SetDrivingStrength referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Write referenced in function Ft_Gpu_Hal_Powercycle
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+22 unresolved externals
+unresolved external symbol __imp_FT_OpenEx referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_ListDevices referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_Close referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT_SetTimeouts referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_SetLatencyTimer referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_CreateDeviceInfoList referenced in function Ft_Gpu_Hal_Init
+unresolved external symbol __imp_FT_GetDeviceInfoDetail referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_UnInitialize referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT4222_SetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetWakeUpInterrupt referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetSuspendOut referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetVersion referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_SetLines referenced in function Ft_Gpu_Hal_SetSPI
+unresolved external symbol __imp_FT4222_SPIMaster_SingleRead referenced in function Ft_Gpu_Hal_FT4222_Rd
+unresolved external symbol __imp_FT4222_SPIMaster_SingleWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPIMaster_MultiReadWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPI_SetDrivingStrength referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Write referenced in function Ft_Gpu_Hal_Powercycle
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+22 unresolved externals
+unresolved external symbol __imp_FT_OpenEx referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_ListDevices referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_Close referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT_SetTimeouts referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_SetLatencyTimer referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_CreateDeviceInfoList referenced in function Ft_Gpu_Hal_Init
+unresolved external symbol __imp_FT_GetDeviceInfoDetail referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_UnInitialize referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT4222_SetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetWakeUpInterrupt referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetSuspendOut referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetVersion referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_SetLines referenced in function Ft_Gpu_Hal_SetSPI
+unresolved external symbol __imp_FT4222_SPIMaster_SingleRead referenced in function Ft_Gpu_Hal_FT4222_Rd
+unresolved external symbol __imp_FT4222_SPIMaster_SingleWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPIMaster_MultiReadWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPI_SetDrivingStrength referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Write referenced in function Ft_Gpu_Hal_Powercycle
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+22 unresolved externals
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+1 unresolved externals
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+1 unresolved externals
+unresolved external symbol "protected: virtual class ATL::CStringT<char,class StrTraitMFC_DLL<char,class ATL::ChTraitsCRT<char> > > __cdecl CBlockAnalogLiveDataView::GetSeriesAxisLabel(int,int)" (?GetSeriesAxisLabel@CBlockAnalogLiveDataView@@MEAA?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@HH@Z)
+unresolved external symbol __imp_FT_OpenEx referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_ListDevices referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_Close referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT_SetTimeouts referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_SetLatencyTimer referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_CreateDeviceInfoList referenced in function Ft_Gpu_Hal_Init
+unresolved external symbol __imp_FT_GetDeviceInfoDetail referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_UnInitialize referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT4222_SetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetWakeUpInterrupt referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetSuspendOut referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetVersion referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_SetLines referenced in function Ft_Gpu_Hal_SetSPI
+unresolved external symbol __imp_FT4222_SPIMaster_SingleRead referenced in function Ft_Gpu_Hal_FT4222_Rd
+unresolved external symbol __imp_FT4222_SPIMaster_SingleWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPIMaster_MultiReadWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPI_SetDrivingStrength referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Write referenced in function Ft_Gpu_Hal_Powercycle
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+23 unresolved externals
+unresolved external symbol __imp_FT_OpenEx referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_ListDevices referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_Close referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT_SetTimeouts referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_SetLatencyTimer referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_CreateDeviceInfoList referenced in function Ft_Gpu_Hal_Init
+unresolved external symbol __imp_FT_GetDeviceInfoDetail referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_UnInitialize referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT4222_SetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetWakeUpInterrupt referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetSuspendOut referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetVersion referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_SetLines referenced in function Ft_Gpu_Hal_SetSPI
+unresolved external symbol __imp_FT4222_SPIMaster_SingleRead referenced in function Ft_Gpu_Hal_FT4222_Rd
+unresolved external symbol __imp_FT4222_SPIMaster_SingleWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPIMaster_MultiReadWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPI_SetDrivingStrength referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Write referenced in function Ft_Gpu_Hal_Powercycle
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+22 unresolved externals
+unresolved external symbol __imp_FT_OpenEx referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_ListDevices referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_Close referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT_SetTimeouts referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_SetLatencyTimer referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_CreateDeviceInfoList referenced in function Ft_Gpu_Hal_Init
+unresolved external symbol __imp_FT_GetDeviceInfoDetail referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_UnInitialize referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT4222_SetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetWakeUpInterrupt referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetSuspendOut referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetVersion referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_SetLines referenced in function Ft_Gpu_Hal_SetSPI
+unresolved external symbol __imp_FT4222_SPIMaster_SingleRead referenced in function Ft_Gpu_Hal_FT4222_Rd
+unresolved external symbol __imp_FT4222_SPIMaster_SingleWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPIMaster_MultiReadWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPI_SetDrivingStrength referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Write referenced in function Ft_Gpu_Hal_Powercycle
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+22 unresolved externals
+unresolved external symbol __imp_FT_OpenEx referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_ListDevices referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_Close referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT_SetTimeouts referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_SetLatencyTimer referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_CreateDeviceInfoList referenced in function Ft_Gpu_Hal_Init
+unresolved external symbol __imp_FT_GetDeviceInfoDetail referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_UnInitialize referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT4222_SetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetWakeUpInterrupt referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetSuspendOut referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetVersion referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_SetLines referenced in function Ft_Gpu_Hal_SetSPI
+unresolved external symbol __imp_FT4222_SPIMaster_SingleRead referenced in function Ft_Gpu_Hal_FT4222_Rd
+unresolved external symbol __imp_FT4222_SPIMaster_SingleWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPIMaster_MultiReadWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPI_SetDrivingStrength referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Write referenced in function Ft_Gpu_Hal_Powercycle
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+22 unresolved externals
+unresolved external symbol "public: bool __cdecl CSiemens7PLCDevice::ReadPlateInfo(int,int,int,struct PlateInfo &)" (?ReadPlateInfo@CSiemens7PLCDevice@@QEAA_NHHHAEAUPlateInfo@@@Z) referenced in function "public: virtual class ATL::CStringT<char,class StrTraitMFC_DLL<char,class ATL::ChTraitsCRT<char> > > __cdecl CVitroEGPSubIdColumnComputer::GetNewPanelID(void)" (?GetNewPanelID@CVitroEGPSubIdColumnComputer@@UEAA?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@XZ)
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+2 unresolved externals
+unresolved external symbol __imp_FT_OpenEx referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_ListDevices referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_Close referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT_SetTimeouts referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_SetLatencyTimer referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_CreateDeviceInfoList referenced in function Ft_Gpu_Hal_Init
+unresolved external symbol __imp_FT_GetDeviceInfoDetail referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_UnInitialize referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT4222_SetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetWakeUpInterrupt referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetSuspendOut referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetVersion referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_SetLines referenced in function Ft_Gpu_Hal_SetSPI
+unresolved external symbol __imp_FT4222_SPIMaster_SingleRead referenced in function Ft_Gpu_Hal_FT4222_Rd
+unresolved external symbol __imp_FT4222_SPIMaster_SingleWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPIMaster_MultiReadWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPI_SetDrivingStrength referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Write referenced in function Ft_Gpu_Hal_Powercycle
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+22 unresolved externals
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+1 unresolved externals
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+1 unresolved externals
+unresolved external symbol __imp_FT_OpenEx referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_ListDevices referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_Close referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT_SetTimeouts referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_SetLatencyTimer referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_CreateDeviceInfoList referenced in function Ft_Gpu_Hal_Init
+unresolved external symbol __imp_FT_GetDeviceInfoDetail referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_UnInitialize referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT4222_SetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetWakeUpInterrupt referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetSuspendOut referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetVersion referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_SetLines referenced in function Ft_Gpu_Hal_SetSPI
+unresolved external symbol __imp_FT4222_SPIMaster_SingleRead referenced in function Ft_Gpu_Hal_FT4222_Rd
+unresolved external symbol __imp_FT4222_SPIMaster_SingleWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPIMaster_MultiReadWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPI_SetDrivingStrength referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Write referenced in function Ft_Gpu_Hal_Powercycle
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+22 unresolved externals
+unresolved external symbol __imp_FT_OpenEx referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_ListDevices referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_Close referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT_SetTimeouts referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_SetLatencyTimer referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_CreateDeviceInfoList referenced in function Ft_Gpu_Hal_Init
+unresolved external symbol __imp_FT_GetDeviceInfoDetail referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_UnInitialize referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT4222_SetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetWakeUpInterrupt referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetSuspendOut referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetVersion referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_SetLines referenced in function Ft_Gpu_Hal_SetSPI
+unresolved external symbol __imp_FT4222_SPIMaster_SingleRead referenced in function Ft_Gpu_Hal_FT4222_Rd
+unresolved external symbol __imp_FT4222_SPIMaster_SingleWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPIMaster_MultiReadWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPI_SetDrivingStrength referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Write referenced in function Ft_Gpu_Hal_Powercycle
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+22 unresolved externals
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+1 unresolved externals
+module machine type 'x86' conflicts with target machine type 'x64'
+unresolved external symbol __imp_FT_OpenEx referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_ListDevices referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_Close referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT_SetTimeouts referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_SetLatencyTimer referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT_CreateDeviceInfoList referenced in function Ft_Gpu_Hal_Init
+unresolved external symbol __imp_FT_GetDeviceInfoDetail referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_UnInitialize referenced in function Ft_Gpu_Hal_Close
+unresolved external symbol __imp_FT4222_SetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetClock referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetWakeUpInterrupt referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SetSuspendOut referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GetVersion referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_SPIMaster_SetLines referenced in function Ft_Gpu_Hal_SetSPI
+unresolved external symbol __imp_FT4222_SPIMaster_SingleRead referenced in function Ft_Gpu_Hal_FT4222_Rd
+unresolved external symbol __imp_FT4222_SPIMaster_SingleWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPIMaster_MultiReadWrite referenced in function Ft_Gpu_Hal_WrCmdBuf
+unresolved external symbol __imp_FT4222_SPI_SetDrivingStrength referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Init referenced in function Ft_Gpu_Hal_Open
+unresolved external symbol __imp_FT4222_GPIO_Write referenced in function Ft_Gpu_Hal_Powercycle
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+22 unresolved externals
+unresolved external symbol "public: bool __cdecl CFormattedFloatGrid::IsColumnAvailableInSiblings(class CColumnChoice,bool)const " (?IsColumnAvailableInSiblings@CFormattedFloatGrid@@QEBA_NVCColumnChoice@@_N@Z) referenced in function "public: virtual void __cdecl CWindowModeChart::VerifyKDXColumnChoice(class CDynamicArray<class CColumnChoicePair>)" (?VerifyKDXColumnChoice@CWindowModeChart@@UEAAXV?$CDynamicArray@VCColumnChoicePair@@@@@Z)
+1 unresolved externals
+warning treated as error - no 'object' file generated
