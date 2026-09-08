@@ -34,7 +34,7 @@ jobs:
     - name: Install C++ MFC Build Tools
       shell: cmd
       run: |
-        "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Installer\vs_installer.exe" modify ^
+        "C:\Program Files\Microsoft Visual Studio\18\Enterprise\Installer\vs_installer.exe" modify ^
         --installPath "C:\Program Files\Microsoft Visual Studio\18\Enterprise"
         --add Microsoft.VisualStudio.Component.VC.ATLMFC ^
         --passive --norestart --includeRecommended
