@@ -34,7 +34,8 @@ jobs:
     - name: Directory List
       shell: cmd
       run: |
-        "dir C:\Program Files\Microsoft Visual Studio\18\Enterprise"
+        "dir \"
+        "dir \Program Files\Microsoft Visual Studio\18\Enterprise"
 
     - name: Install C++ MFC Build Tools
       shell: cmd
