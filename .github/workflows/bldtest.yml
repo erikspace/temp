@@ -39,14 +39,6 @@ jobs:
         dir
         echo done
 
-    - name: Install C++ MFC Build Tools
-      shell: cmd
-      run: |
-        "C:\Program Files\Microsoft Visual Studio\18\Enterprise\Installer\vs_installer.exe" modify ^
-        --installPath "C:\Program Files\Microsoft Visual Studio\18\Enterprise"
-        --add Microsoft.VisualStudio.Component.VC.ATLMFC ^
-        --passive --norestart --includeRecommended
-
     - name: Set up MSBuild
       uses: microsoft/setup-msbuild@v3
 
