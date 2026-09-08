@@ -16,7 +16,8 @@ jobs:
 
     steps:
     - name: Dump Env 1 (Windows)
-      run: Get-ChildItem Env: | Sort-Object Name
+      shell: cmd
+      run: set
 
     - name: Checkout repository
       uses: actions/checkout@v5
@@ -27,7 +28,8 @@ jobs:
         echo "VS_PATH=$vsPath" >> $env:GITHUB_ENV
 
     - name: Dump Env 2 (Windows)
-      run: Get-ChildItem Env: | Sort-Object Name
+      shell: cmd
+      run: set
 
     - name: Install C++ MFC Build Tools
       shell: cmd
