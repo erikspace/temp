@@ -35,8 +35,9 @@ jobs:
       shell: cmd
       run: |
         c:
+        cd "Program Files\Microsoft Visual Studio\18\Enterprise"
         dir
-        echo check syntax
+        echo done
 
     - name: Install C++ MFC Build Tools
       shell: cmd
