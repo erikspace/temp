@@ -15,6 +15,9 @@ jobs:
     runs-on: windows-latest
 
     steps:
+    - name: Dump Env 1 (Windows)
+      run: Get-ChildItem Env: | Sort-Object Name
+
     - name: Checkout repository
       uses: actions/checkout@v5
 
@@ -22,6 +25,9 @@ jobs:
       run: |
         $vsPath = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -property installationPath
         echo "VS_PATH=$vsPath" >> $env:GITHUB_ENV
+
+    - name: Dump Env 2 (Windows)
+      run: Get-ChildItem Env: | Sort-Object Name
 
     - name: Install C++ MFC Build Tools
       shell: cmd
