@@ -1,0 +1,93 @@
+param(
+    [string[]]$Roots = @("C:\ksa_st\SDKs"),
+    [string[]]$Symbols = @(
+        "FT_OpenEx",
+        "FT_GetDeviceInfoDetail",
+        "FT4222_SPIMaster_Init",
+        "FT4222_GPIO_Write"
+    ),
+    [switch]$OnlyX64
+)
+
+$dumpbinCmd = Get-Command dumpbin.exe -ErrorAction SilentlyContinue
+if ($null -eq $dumpbinCmd) {
+    throw "dumpbin.exe not found. Run this in Developer PowerShell for Visual Studio."
+}
+$dumpbin = $dumpbinCmd.Source
+
+$files = foreach ($r in $Roots) {
+    Get-ChildItem -Path $r -Recurse -File -ErrorAction SilentlyContinue |
+        Where-Object { $_.Extension -in ".lib", ".dll" }
+}
+
+Write-Host "Scanning $($files.Count) files..."
+
+$results = @()
+$errors  = @()
+$scanned = 0
+
+foreach ($f in $files) {
+    $scanned++
+
+    try {
+        $headers = & $dumpbin /nologo /headers $f.FullName 2>&1
+        $hdrText = ($headers | Out-String -Width 8192)
+
+        $machine = "unknown"
+        if ($hdrText -match 'machine\s+\(x64\)|machine\s+\(AMD64\)|8664 machine') { $machine = "x64" }
+        elseif ($hdrText -match 'machine\s+\(x86\)|machine\s+\(14C\)|14C machine') { $machine = "x86" }
+
+        if ($OnlyX64 -and $machine -ne "x64") { continue }
+
+        $textBlocks = @()
+        if ($f.Extension -ieq ".lib") {
+            $textBlocks += (& $dumpbin /nologo /linkermember:1 $f.FullName 2>&1 | Out-String -Width 8192)
+            $textBlocks += (& $dumpbin /nologo /linkermember:2 $f.FullName 2>&1 | Out-String -Width 8192)
+            $textBlocks += (& $dumpbin /nologo /symbols        $f.FullName 2>&1 | Out-String -Width 8192)
+        } else {
+            $textBlocks += (& $dumpbin /nologo /exports $f.FullName 2>&1 | Out-String -Width 8192)
+            $textBlocks += (& $dumpbin /nologo /symbols $f.FullName 2>&1 | Out-String -Width 8192)
+        }
+
+        $allText = ($textBlocks -join "`n")
+        $found = @()
+
+        foreach ($s in $Symbols) {
+            $patterns = @(
+                [regex]::Escape($s),
+                [regex]::Escape("__imp_$s"),
+                [regex]::Escape("__imp__$s")
+            )
+            foreach ($p in $patterns) {
+                if ([regex]::IsMatch($allText, $p, [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)) {
+                    $found += $s
+                    break
+                }
+            }
+        }
+
+        if ($found.Count -gt 0) {
+            $results += [pscustomobject]@{
+                File    = $f.FullName
+                Type    = $f.Extension
+                Machine = $machine
+                Found   = ($found | Sort-Object -Unique) -join ", "
+            }
+        }
+    }
+    catch {
+        $errors += [pscustomobject]@{
+            File  = $f.FullName
+            Error = $_.Exception.Message
+        }
+    }
+}
+
+Write-Host "`nScanned: $scanned"
+Write-Host "Matches: $($results.Count)"
+$results | Sort-Object File | Format-Table -AutoSize
+
+if ($errors.Count -gt 0) {
+    Write-Host "`nErrors: $($errors.Count)"
+    $errors | Select-Object -First 20 | Format-Table -AutoSize
+}
