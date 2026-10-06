@@ -214,11 +214,11 @@ close $outfh;
 
 # Keep the simple resource pages present so Quick Access never points at missing files.
 my @pages = (
-  ['buildhistory.html','Build History','All recorded builds from builds.csv.'],
-  ['buildlogs.html','Build Logs','Build log resources are provided by the build system.'],
-  ['artifacts.html','Artifacts','Build artifacts are provided by the build system.'],
-  ['buildimages.html','Build Images','Build images are provided by the build system.'],
-  ['environments.html','Environments','Deployment and environment status.'],
+  ['buildhistory.html','Build History','All recorded builds'],
+  ['buildlogs.html','Build Logs','Build log resources are provided by the build system'],
+  ['artifacts.html','Artifacts','Build artifacts are provided by the build system'],
+  ['buildimages.html','Build Images','Build images are provided by the build system'],
+  ['environments.html','Environments','Deployment and environment status'],
 );
 for my $p (@pages) {
     open my $pf, '>', "$out/$p->[0]" or die "Cannot write $p->[0]: $!\n";
