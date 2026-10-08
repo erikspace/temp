@@ -87,9 +87,9 @@ my $build_html = '';
 for my $r (@rows) {
     my $sc=status_class($r->{status});
     my $links = '';
-    $links .= qq{<a href="} . attr($r->{logs} || 'buildlogs.html') . qq{">Logs</a>};
+    $links .= qq{<a href="} . attr($r->{logs} || 'logs.html') . qq{">Logs</a>};
     $links .= qq{<a href="} . attr($r->{artifacts} || 'artifacts.html') . qq{">Artifacts</a>};
-    $links .= qq{<a href="} . attr($r->{images} || 'buildimages.html') . qq{">Images</a>};
+    $links .= qq{<a href="} . attr($r->{images} || 'images.html') . qq{">Images</a>};
     my $sha=short_sha($r->{commit});
     $build_html .= qq{      <article class="build-row" data-project="} . attr($r->{project}) . qq{">\n};
     $build_html .= qq{        <div class="build-status $sc">} . status_symbol($r->{status}) . qq{</div>\n};
@@ -125,7 +125,7 @@ my $template = <<'HTML';
     </div>
     <nav>
       <a class="active" href="#" id="dashboard-link">Dashboard</a>
-      <a href="buildhistory.html">Build History</a>
+      <a href="history.html">Build History</a>
       <a href="artifacts.html">Artifacts</a>
       <a href="environments.html">Environments</a>
     </nav>
@@ -165,9 +165,9 @@ my $template = <<'HTML';
       <div class="panel">
         <div class="panel-header"><div><h2>Quick access</h2><p>Common build resources</p></div></div>
         <div class="quick-grid">
-          <a href="buildlogs.html"><strong>Build logs</strong><span>Search and inspect logs →</span></a>
+          <a href="logs.html"><strong>Build logs</strong><span>Search and inspect logs →</span></a>
           <a href="artifacts.html"><strong>Artifacts</strong><span>Browse build outputs →</span></a>
-          <a href="buildimages.html"><strong>Build images</strong><span>View generated images →</span></a>
+          <a href="images.html"><strong>Build images</strong><span>View generated images →</span></a>
           <a href="environments.html"><strong>Environments</strong><span>Deployment status →</span></a>
         </div>
       </div>
@@ -214,10 +214,10 @@ close $outfh;
 
 # Keep the simple resource pages present so Quick Access never points at missing files.
 my @pages = (
-  ['buildhistory.html','Build History','All recorded builds'],
-  ['buildlogs.html','Build Logs','Build log resources are provided by the build system'],
+  ['history.html','Build History','All recorded builds'],
+  ['logs.html','Build Logs','Build log resources are provided by the build system'],
   ['artifacts.html','Artifacts','Build artifacts are provided by the build system'],
-  ['buildimages.html','Build Images','Build images are provided by the build system'],
+  ['images.html','Build Images','Build images are provided by the build system'],
   ['environments.html','Environments','Deployment and environment status'],
 );
 for my $p (@pages) {
