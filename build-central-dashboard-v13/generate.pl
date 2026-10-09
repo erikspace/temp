@@ -7,8 +7,12 @@ use Text::ParseWords qw(parse_line);
 use POSIX qw(strftime);
 use Time::Local qw(timelocal);
 
-my $csv = $ARGV[0] // "$Bin/builds.csv";
-my $out = $ARGV[1] // $Bin;
+my $csv = $ARGV[0] // "XXEMPTYXX" ;
+my $out = $ARGV[1] // "XXEMPTYXX" ;
+
+die "builds CSV unspecified\n" if $csv =~ "XXEMPTYXX";
+die "output directory unspecified\n" if $out =~ "XXEMPTYXX";
+die "output name pre exists\n" if (-e $out);
 
 open my $fh, '<', $csv or die "Cannot open $csv: $!\n";
 my $header = <$fh>;
