@@ -21,7 +21,7 @@
 use strict;
 use warnings;
 
-my $input = shift || 'builds.csv';
+my $input = shift || 'all.csv';
 
 open my $fh, '<', $input
     or die "Cannot open $input: $!";
