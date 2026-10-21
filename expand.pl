@@ -2,44 +2,41 @@
 
 use strict;
 use warnings;
-use Text::CSV;
 
 my $input = shift || 'all.csv';
-
-my $csv = Text::CSV->new({
-    binary    => 1,
-    auto_diag => 1,
-});
 
 open my $in, '<', $input
     or die "Cannot open $input: $!";
 
-my $header = $csv->getline($in);
-$csv->print(\*STDOUT, $header);
-print "\n";
+my $header = <$in>;
+chomp $header;
+
+my @columns = split /,/, $header;
 
 my %column;
-@column{@$header} = (0 .. $#$header);
+@column{@columns} = (0 .. $#columns);
 
 die "CSV has no project column\n"
     unless exists $column{project};
 
-while (my $row = $csv->getline($in)) {
+print "$header\n";
 
-    if (defined $row->[$column{project}]
-        && lc($row->[$column{project}]) eq 'integrated') {
+while (<$in>) {
+    chomp;
+
+    my @row = split /,/, $_, -1;
+
+    if (defined $row[$column{project}]
+        && lc($row[$column{project}]) eq 'integrated') {
 
         for my $project ('Bandit', 'Eyespy', 'KSA 400', 'ICE', 'MOS') {
-            my @new_row = @$row;
+            my @new_row = @row;
             $new_row[$column{project}] = $project;
-
-            $csv->print(\*STDOUT, \@new_row);
-            print "\n";
+            print join(',', @new_row), "\n";
         }
 
     } else {
-        $csv->print(\*STDOUT, $row);
-        print "\n";
+        print "$_\n";
     }
 }
 
