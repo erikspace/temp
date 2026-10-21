@@ -20,46 +20,92 @@
 
 use strict;
 use warnings;
-use Text::CSV;
 
 my $input = shift || 'builds.csv';
-
-my $csv = Text::CSV->new({
-    binary    => 1,
-    auto_diag => 1,
-});
 
 open my $fh, '<', $input
     or die "Cannot open $input: $!";
 
-my $header = $csv->getline($fh);
+sub parse_csv_line {
+    my ($line) = @_;
+    my (@fields, $field);
+    my $quoted = 0;
+    $field = '';
 
-die "Empty CSV\n" unless $header;
+    # Remove the record-ending newline.
+    $line =~ s/\r?\n$//;
 
-# Convert CSV column names to SQL-safe identifiers.
+    my @chars = split //, $line;
+
+    for (my $i = 0; $i < @chars; $i++) {
+        my $c = $chars[$i];
+
+        if ($quoted) {
+            if ($c eq '"') {
+                if ($i + 1 < @chars && $chars[$i + 1] eq '"') {
+                    $field .= '"';
+                    $i++;
+                } else {
+                    $quoted = 0;
+                }
+            } else {
+                $field .= $c;
+            }
+        } elsif ($c eq ',' ) {
+            push @fields, $field;
+            $field = '';
+        } elsif ($c eq '"' && $field eq '') {
+            $quoted = 1;
+        } else {
+            $field .= $c;
+        }
+    }
+
+    die "Unterminated quoted CSV field\n" if $quoted;
+
+    push @fields, $field;
+    return @fields;
+}
+
+my $header_line = <$fh>;
+die "Empty CSV\n" unless defined $header_line;
+
+my @headers = parse_csv_line($header_line);
+
+# Quote SQL identifiers safely.
 my @columns = map {
-    '"' . $_ =~ s/"/""/gr . '"'
-} @$header;
+    my $name = $_;
+    $name =~ s/"/""/g;
+    qq{"$name"};
+} @headers;
 
-print "BEGIN TRANSACTION;\n\n";
+print "BEGIN TRANSACTION;\n";
 
-while (my $row = $csv->getline($fh)) {
+while (my $line = <$fh>) {
+    next if $line =~ /^\s*$/;
+
+    my @fields = parse_csv_line($line);
+
+    die "Column count mismatch in CSV row\n"
+        unless @fields == @headers;
 
     my @values = map {
         if (!defined($_) || $_ eq '') {
             'NULL';
         } else {
-            "'" . $_ =~ s/'/''/gr . "'";
+            my $value = $_;
+            $value =~ s/'/''/g;
+            "'$value'";
         }
-    } @$row;
+    } @fields;
 
-    print "INSERT INTO builds (";
-    print join(', ', @columns);
-    print ") VALUES (";
-    print join(', ', @values);
-    print ");\n";
+    print "INSERT INTO builds (",
+          join(', ', @columns),
+          ") VALUES (",
+          join(', ', @values),
+          ");\n";
 }
 
-print "\nCOMMIT;\n";
+print "COMMIT;\n";
 
 close $fh;
