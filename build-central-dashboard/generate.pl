@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use FindBin qw($Bin);
 use File::Path qw(make_path);
+use File::Copy;
 use Text::ParseWords qw(parse_line);
 use POSIX qw(strftime);
 use Time::Local qw(timelocal);
@@ -230,4 +231,6 @@ for my $p (@pages) {
     close $pf;
 }
 
+my $outcss = "$out/styles.css";
+copy("styles.css", $outcss) or die "Cannot copy CSS: $!\n";
 print "Generated $out/index.html from $csv (" . scalar(@rows) . " builds)\n";
