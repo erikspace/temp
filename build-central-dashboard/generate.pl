@@ -198,7 +198,7 @@ my $template = <<'HTML';
         <div class="quick-grid">
           <a href="logs.html"><strong>Build logs</strong><span>Search and inspect logs →</span></a>
           <a href="artifacts.html"><strong>Artifacts</strong><span>Browse build outputs →</span></a>
-          <a href="images.html"><strong>Build images</strong><span>View generated images →</span></a>
+          <a href="about.html"><strong>About system</strong><span>Build system and status pages →</span></a>
           <a href="environments.html"><strong>Environments</strong><span>Deployment status →</span></a>
         </div>
       </div>
@@ -248,7 +248,7 @@ my @pages = (
   ['history.html','Build History','All recorded builds'],
   ['logs.html','Build Logs','Build log resources are provided by the build system'],
   ['artifacts.html','Artifacts','Build artifacts are provided by the build system'],
-  ['images.html','Build Images','Build images are provided by the build system'],
+  ['about.html','About','Basic information'],
   ['environments.html','Environments','Deployment and environment status'],
 );
 for my $p (@pages) {
