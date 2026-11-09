@@ -120,7 +120,7 @@ for my $r (@rows) {
     my $links = '';
     $links .= qq{<a href="} . attr($r->{logs} || 'logs.html') . qq{">Logs</a>};
     $links .= qq{<a href="} . attr($r->{artifacts} || 'artifacts.html') . qq{">Artifacts</a>};
-    $links .= qq{<a href="} . attr($r->{images} || 'images.html') . qq{">Images</a>};
+    $links .= qq{<a href="} . attr($r->{images} || 'changes.html') . qq{">Changes</a>};
     my $sha=short_sha($r->{commit});
     $build_html .= qq{      <article class="build-row" data-project="} . attr($r->{project}) . qq{">\n};
     $build_html .= qq{        <div class="build-status $sc">} . status_symbol($r->{status}) . qq{</div>\n};
