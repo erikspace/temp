@@ -66,11 +66,27 @@ sub fmt_time {
 sub fmt_when {
     my ($s) = @_;
     return '' unless $s;
-    my $t=parse_time($s); return $s unless defined $t;
-    my $now=time();
-    my $today=strftime('%Y-%m-%d',localtime($now));
-    my $day=strftime('%Y-%m-%d',localtime($t));
-    my $label = $day eq $today ? 'Today' : ($day eq strftime('%Y-%m-%d',localtime($now-86400)) ? 'Yesterday' : strftime('%b %-d',localtime($t)));
+
+    my $t = parse_time($s);
+    return $s unless defined $t;
+
+    my $now = time();
+    my $today = strftime('%Y-%m-%d', localtime($now));
+    my $day = strftime('%Y-%m-%d', localtime($t));
+
+    my $label;
+
+    if ($day eq $today) {
+        $label = 'Today';
+    }
+    elsif ($day eq strftime('%Y-%m-%d', localtime($now - 86400))) {
+        $label = 'Yesterday';
+    }
+    else {
+        my @parts = localtime($t);
+        $label = strftime('%b', @parts) . ' ' . $parts[3];
+    }
+
     return $label . ', ' . fmt_time($s);
 }
 sub ago {
