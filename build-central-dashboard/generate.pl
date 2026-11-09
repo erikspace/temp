@@ -43,8 +43,18 @@ sub slug { my $s=lc($_[0]//''); $s =~ s/[^a-z0-9]+/-/g; $s =~ s/^-|-$//g; return
 sub short_sha { my $s=$_[0]//'unknown'; return length($s)>8 ? substr($s,0,8) : $s; }
 sub github_url { my $sha=$_[0]//' '; return "https://github.com/k-SpaceAssociates/main/commit/$sha"; }
 sub parse_time {
-    my ($s)=@_; return undef unless $s && $s =~ /^(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d)$/;
-    return timelocal(0,$5,$4,$3,$2-1,$1);
+    my ($s) = @_;
+    return undef unless $s;
+
+    if ($s =~ /^(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})(\d{2})$/) {
+        return timelocal($6, $5, $4, $3, $2-1, $1);
+    }
+
+    if ($s =~ /^(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d)$/) {
+        return timelocal(0, $5, $4, $3, $2-1, $1);
+    }
+
+    return undef;
 }
 sub fmt_time {
     my ($s) = @_;
