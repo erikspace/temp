@@ -248,7 +248,7 @@ my @pages = (
   ['history.html','Build History','All recorded builds'],
   ['logs.html','Build Logs','Build log resources are provided by the build system'],
   ['artifacts.html','Artifacts','Build artifacts are provided by the build system'],
-  ['about.html','About','Basic information'],
+  ['about.html','About','Lots in flux here    Please contact Eric Melville for any related reason'],
   ['environments.html','Environments','Deployment and environment status'],
 );
 for my $p (@pages) {
