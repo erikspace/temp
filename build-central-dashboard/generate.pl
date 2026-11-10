@@ -332,8 +332,7 @@ close $history;
 my @pages = (
   ['logs.html','Build Logs','Build log resources are provided by the build system PLACEHOLDER provide basic text search of logs'],
   ['artifacts.html','Artifacts','copied "P:\cd releases\Beta Applications\Daily\VS2017 Installers" to clipboard'],
-  ['about.html','About','Lots in flux here    Please contact Eric Melville for any related reason'],
-  ['environments.html','Environments','Deployment and environment status'],
+  ['about.html','About','Lots in flux here, please contact Eric Melville for any related reason'],
 );
 for my $p (@pages) {
     open my $pf, '>', "$out/$p->[0]" or die "Cannot write $p->[0]: $!\n";
