@@ -115,7 +115,9 @@ for my $p (@projects) {
 }
 
 my $build_html = '';
-for my $r (@rows) {
+# Cap at 100.
+my @display_rows = @rows > 100 ? @rows[0 .. 99] : @rows;
+for my $r (@display_rows) {
     my $sc=status_class($r->{status});
     my $links = '';
     $links .= qq{<a href="} . attr($r->{logs} || 'logs.html') . qq{">Logs</a>};
