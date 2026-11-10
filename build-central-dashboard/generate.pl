@@ -217,7 +217,6 @@ my $template = <<'HTML';
     const showAll = project === 'all';
     buildRows.forEach(row => { row.hidden = !showAll && row.dataset.project !== project; });
     projectLinks.forEach(link => link.classList.toggle('active', link.dataset.project === project));
-    dashboard.classList.toggle('active', showAll);
     sectionTitle.textContent = showAll ? 'Recent builds' : `${project} builds`;
     sectionSubtitle.textContent = showAll ? 'Latest activity across engineering projects' : `Recent build activity for ${project}`;
   }
