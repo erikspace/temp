@@ -267,7 +267,7 @@ for my $r (@rows) {
         '<tr><td>' . esc($r->{build}) . '</td>' .
         '<td>' . esc($date) . '</td>' .
         '<td>' . esc($r->{project}) . '</td>' .
-        '<td>' . esc($r->{duration}) . '</td>' .
+        '<td>' . esc($r->{started}) . '</td>' .
         '<td>' . esc($status) . '</td></tr>' . "\n";
 }
 
