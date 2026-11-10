@@ -330,7 +330,7 @@ close $history;
 # Keep the simple resource pages present so Quick Access never points at missing files.
 my @pages = (
   ['logs.html','Build Logs','Build log resources are provided by the build system'],
-  ['artifacts.html','Artifacts','Build artifacts are provided by the build system'],
+  ['artifacts.html','Artifacts','P:\cd releases\Beta Applications\Daily'],
   ['about.html','About','Lots in flux here    Please contact Eric Melville for any related reason'],
   ['environments.html','Environments','Deployment and environment status'],
 );
