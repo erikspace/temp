@@ -6,15 +6,14 @@ use warnings;
 my $csv_file = $ARGV[0] // 'builds.csv';
 my $sh_file  = $ARGV[1] // 'generate-changes.sh';
 
-# Read a standard CSV line, including quoted fields.
 sub parse_csv_line {
     my ($line) = @_;
     chomp $line;
     $line =~ s/\r$//;
 
-    my @fields;
-    my $field = '';
+    my (@fields, $field);
     my $quoted = 0;
+    $field = '';
 
     for (my $i = 0; $i < length($line); $i++) {
         my $c = substr($line, $i, 1);
@@ -42,7 +41,6 @@ sub parse_csv_line {
 
     die "Unclosed CSV quote\n" if $quoted;
     push @fields, $field;
-
     return @fields;
 }
 
@@ -58,7 +56,7 @@ my %column;
 die "CSV must contain build and commit columns\n"
     unless exists $column{build} && exists $column{commit};
 
-my @rows;
+my %builds;
 
 while (my $line = <$in>) {
     next if $line =~ /^\s*$/;
@@ -71,34 +69,37 @@ while (my $line = <$in>) {
     next unless $build =~ /^\d+$/;
     next unless $commit =~ /^[0-9a-fA-F]+$/;
 
-    push @rows, {
-        build  => $build,
-        commit => $commit,
-    };
+    if (exists $builds{$build}) {
+        die "Conflicting commit hashes for build $build\n"
+            if lc($builds{$build}) ne lc($commit);
+        next;
+    }
+
+    $builds{$build} = $commit;
 }
 
 close $in;
 
-# Newest build first.
-@rows = sort { $b->{build} <=> $a->{build} } @rows;
+my @build_numbers = sort { $b <=> $a } keys %builds;
 
 open my $out, '>', $sh_file
     or die "Cannot create $sh_file: $!\n";
 
 print $out "#!/bin/sh\nset -e\n\n";
+print $out "mkdir -p changelogs\n\n";
 
-# Compare each build with the next older build.
-# The oldest build has no comparison, so it is skipped.
-for (my $i = 0; $i < $#rows; $i++) {
-    my $newer = $rows[$i];
-    my $older = $rows[$i + 1];
+# Skip the oldest build; it has no previous build to compare against.
+for (my $i = 0; $i < $#build_numbers; $i++) {
+    my $newer = $build_numbers[$i];
+    my $older = $build_numbers[$i + 1];
 
-    my $dir = "BX$newer->{build}";
+    my $dir = "changelogs/BX$newer";
 
     print $out "mkdir -p $dir\n";
-    print $out "git log $older->{commit}..$newer->{commit} > $dir/changes.txt\n\n";
+    print $out "git log $builds{$older}..$builds{$newer} > $dir/changes.txt\n\n";
 }
 
 close $out;
 
-print "Generated $sh_file\n";
+print "Generated $sh_file with ", $#build_numbers,
+      " changelog commands\n";
