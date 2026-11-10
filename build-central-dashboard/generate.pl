@@ -341,4 +341,6 @@ for my $p (@pages) {
 
 my $outcss = "$out/styles.css";
 copy("styles.css", $outcss) or die "Cannot copy CSS: $!\n";
+my $outenv = "$out/environments.html";
+copy("environments.html", $outenv) or die "Cannot copy HTML: $!\n";
 print "Generated $out/index.html from $csv (" . scalar(@rows) . " builds)\n";
