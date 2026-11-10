@@ -245,9 +245,90 @@ open my $outfh, '>', "$out/index.html" or die "Cannot write index.html: $!\n";
 print $outfh $template;
 close $outfh;
 
+# Generate complete build history.
+my $history_html = '';
+
+for my $r (@rows) {
+    my $date = $r->{completed} // '';
+    my $t = parse_time($date);
+
+    if (defined $t) {
+        my @parts = localtime($t);
+        $date = strftime('%b', @parts) . ' ' .
+                $parts[3] . ', ' . ($parts[5] + 1900);
+    }
+
+    my $status = lc($r->{status} // '');
+    $status = $status eq 'passed' ? 'Success'
+            : $status eq 'failed' ? 'Failed'
+            : ucfirst($status || 'Unknown');
+
+    $history_html .=
+        '<tr><td>' . esc($r->{build}) . '</td>' .
+        '<td>' . esc($date) . '</td>' .
+        '<td>' . esc($r->{project}) . '</td>' .
+        '<td>' . esc($r->{duration}) . '</td>' .
+        '<td>' . esc($status) . '</td></tr>' . "\n";
+}
+
+open my $history, '>', "$out/history.html"
+    or die "Cannot write history.html: $!\n";
+
+print $history <<'HTML';
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build History · Build Central</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    color: #263445;
+}
+h1 { margin-bottom: 8px; }
+a { color: #2865a5; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+th, td {
+    padding: 7px 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background: #f2f4f7;
+    position: sticky;
+    top: 0;
+}
+tr:hover { background: #f7f9fb; }
+</style>
+</head>
+<body>
+<a href="index.html">← Build Dashboard</a>
+<h1>Build History</h1>
+<table>
+<thead>
+<tr>
+<th>Build #</th>
+<th>Date</th>
+<th>Project</th>
+<th>Build Time</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+HTML
+
+print $history $history_html;
+print $history "</tbody></table></body></html>\n";
+close $history;
+
 # Keep the simple resource pages present so Quick Access never points at missing files.
 my @pages = (
-  ['history.html','Build History','All recorded builds'],
   ['logs.html','Build Logs','Build log resources are provided by the build system'],
   ['artifacts.html','Artifacts','Build artifacts are provided by the build system'],
   ['about.html','About','Lots in flux here    Please contact Eric Melville for any related reason'],
