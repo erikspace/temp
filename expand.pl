@@ -29,7 +29,7 @@ while (<$in>) {
     if (defined $row[$column{project}]
         && lc($row[$column{project}]) eq 'integrated') {
 
-        for my $project ('Bandit', 'Eyespy', 'KSA 400', 'ICE', 'MOS') {
+        for my $project ('ACE', 'BandiT', 'EyeSpy', 'kSA400', 'kSAICE', 'kSAMOS', 'RateRat', 'SpectR') {
             my @new_row = @row;
             $new_row[$column{project}] = $project;
             print join(',', @new_row), "\n";
