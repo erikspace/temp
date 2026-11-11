@@ -102,8 +102,16 @@ sub ago {
 sub status_class { my $s=lc($_[0]//'unknown'); return $s eq 'passed' ? 'passed' : $s eq 'failed' ? 'failed' : $s eq 'running' ? 'running' : 'unknown'; }
 sub status_symbol { my $s=lc($_[0]//''); return '✓' if $s eq 'passed'; return '!' if $s eq 'failed'; return '…' if $s eq 'running'; return '•'; }
 
-# Newest first.
-@rows = sort { (parse_time($b->{completed}) // 0) <=> (parse_time($a->{completed}) // 0) } @rows;
+# sort by build number, then project name, then completion time
+@rows = sort {
+    ($b->{build} // 0) <=> ($a->{build} // 0)
+    ||
+    lc($a->{project} // '') cmp lc($b->{project} // '')
+    ||
+    (parse_time($b->{completed}) // 0) <=>
+    (parse_time($a->{completed}) // 0)
+} @rows;
+
 my %projects;
 $projects{$_->{project}}++ for @rows;
 my @projects = sort keys %projects;
