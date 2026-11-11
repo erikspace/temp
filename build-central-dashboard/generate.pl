@@ -249,7 +249,12 @@ close $outfh;
 # Generate complete build history.
 my $history_html = '';
 
-for my $r (@rows) {
+for my $r (sort {
+    ($b->{build} // 0) <=> ($a->{build} // 0)
+    ||
+    (parse_time($b->{completed}) // 0) <=>
+    (parse_time($a->{completed}) // 0)
+} @rows) {
     my $date = $r->{completed} // '';
     my $t = parse_time($date);
 
