@@ -340,7 +340,6 @@ close $history;
 my @pages = (
   ['logs.html','Build Logs','Build log resources are provided by the build system PLACEHOLDER provide basic text search of logs'],
   ['artifacts.html','Artifacts','copied "P:\cd releases\Beta Applications\Daily\VS2017 Installers" to clipboard'],
-  ['about.html','About','Lots in flux here, please contact Eric Melville for any related reason'],
 );
 for my $p (@pages) {
     open my $pf, '>', "$out/$p->[0]" or die "Cannot write $p->[0]: $!\n";
@@ -352,4 +351,6 @@ my $outcss = "$out/styles.css";
 copy("styles.css", $outcss) or die "Cannot copy CSS: $!\n";
 my $outenv = "$out/environments.html";
 copy("environments.html", $outenv) or die "Cannot copy HTML: $!\n";
+my $outabt = "$out/about.html";
+copy("about.html", $outabt) or die "Cannot copy HTML: $!\n";
 print "Generated $out/index.html from $csv (" . scalar(@rows) . " builds)\n";
